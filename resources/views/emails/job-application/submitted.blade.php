@@ -85,7 +85,7 @@
         </tr>
         <tr>
             <th>College Years</th>
-            <td>{{ $collegeYears }}<td>
+            <td>{{ $collegeYears }}</td>
         </tr>
         <tr>
             <th>Other Institution Name</th>
@@ -169,7 +169,7 @@
         </tr>
         <tr>
             <th>1st Reference Name<th>
-            <td>{{ $reference1Name }}<td>
+            <td>{{ $reference1Name }}</td>
         </tr>
         <tr>
             <th>1st Reference Relationship<th>
