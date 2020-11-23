@@ -396,7 +396,6 @@ function getJobAppDataPopulator(defaultData) {
           currentData[key] = newData[key];
       }
     });
-    console.log(currentData);
     return currentData;
   };
 }
@@ -679,7 +678,7 @@ function handleEducationOnChange(inputName, inputValue, updateState) {
 
 function attachOnChangeHandler(elements, onChangeHandler) {
   for (var i = 0; i < elements.length; i++) {
-    elements[i].onchange = onChangeHandler;
+    elements[i].oninput = onChangeHandler;
   }
 }
 

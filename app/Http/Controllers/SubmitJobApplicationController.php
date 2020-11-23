@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Mail\JobApplicationSubmitted;
+use InvalidArgumentException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class SubmitJobApplicationController extends Controller
 {
+    const DATE_FORMAT = 'm/d/Y';
+
     public function __invoke(Request $request) {
         $firstName = $request->input('firstName', '');
         $lastName = $request->input('lastName', '');
@@ -78,30 +81,32 @@ class SubmitJobApplicationController extends Controller
             'startNow' => $canStartNow,
             'startWhen' => $dateCanStart,
             'highSchoolName' => $highSchoolName,
-            'highSchoolDiploma' => $highSchoolDiploma,
+            'highSchoolDiploma' => $this->parseDiploma($highSchoolDiploma),
             'collegeName' => $collegeName,
             'collegeMajor' => $collegeMajor,
-            'collegeDegree' => $collegeDegree,
+            'collegeDegree' => $this->parseDegree($collegeDegree),
             'collegeYears' => $collegeYears,
             'otherEdName' => $otherEducationName,
             'otherEdMajor' => $otherEducationMajor,
-            'otherEdDegree' => $otherEducationDegree,
+            'otherEdDegree' => $this->parseDegree($otherEducationDegree),
             'otherEdYears' => $otherEducationYears,
             'otherCourseWork' => $otherCourseWork,
             'employment1Name' => $employment1Name,
             'employment1Duties' => $employment1Duties,
-            'employment1Start' => $employment1Start,
-            'employment1End' => $employment1End,
+            'employment1Start' => date_format(
+                date_create($employment1Start), self::DATE_FORMAT),
+            'employment1End' => date_format(
+                date_create($employment1End), self::DATE_FORMAT),
             'employment1Reason' => $employment1Reason,
             'employment2Name' => $employment2Name,
             'employment2Duties' => $employment2Duties,
-            'employment2Start' => $employment2Start,
-            'employment2End' => $employment2End,
+            'employment2Start' => date_format(date_create($employment2Start), self::DATE_FORMAT),
+            'employment2End' => date_format(date_create($employment2End), self::DATE_FORMAT),
             'employment2Reason' => $employment2Reason,
             'employment3Name' => $employment3Name,
             'employment3Duties' => $employment3Duties,
-            'employment3Start' => $employment3Start,
-            'employment3End' => $employment3End,
+            'employment3Start' => date_format(date_create($employment3Start), self::DATE_FORMAT),
+            'employment3End' => date_format(date_create($employment3End), self::DATE_FORMAT),
             'employment3Reason' => $employment3Reason,
             'reference1Name' => $references1Name,
             'reference1Relationship' => $references1Relationship,
@@ -114,11 +119,42 @@ class SubmitJobApplicationController extends Controller
             'reference3PhoneNumber' => $references3PhoneNumber,
         ];
 
-        /*
-        Mail::to(config('mail.to.address'))
-            ->send(new JobApplicationSubmitted(), $data);
-        */
-        
         return view('emails.job-application.submitted', $data);
+    }
+
+    private function parseDiploma(string $diploma): string 
+    {
+        switch (strtolower($diploma)) {
+            case 'highschool':
+                return 'High School';
+            case 'ged':
+                return 'General Education Development (GED)';
+            case 'none':
+                return 'None';
+            default:
+                return $diploma;
+        }
+    }
+
+    private function parseDegree(string $degree): string 
+    {
+        switch (strtolower($degree)) {
+            case 'none':
+                return 'None';
+            case 'associateofarts':
+                return 'Associate of Arts';
+            case 'associateofscience':
+                return 'Associate of Science';
+            case 'bachelorofarts':
+                return 'Bachelor of Arts';
+            case 'bachelorofscience':
+                return 'Bachelor of Science';
+            case 'masterofartsorscience':
+                return 'Master of Arts or Science';
+            case 'other':
+                return 'Other';
+            default:
+                return $degree;
+        }
     }
 }

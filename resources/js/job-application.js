@@ -78,7 +78,6 @@ function getJobAppDataPopulator(defaultData) {
             }
         })
 
-        console.log(currentData)
         return currentData
     }
 }
@@ -356,7 +355,7 @@ function handleEducationOnChange(inputName, inputValue, updateState) {
 
 function attachOnChangeHandler(elements, onChangeHandler) {
     for (let i = 0; i < elements.length; i++) {
-        elements[i].onchange = onChangeHandler
+        elements[i].oninput = onChangeHandler
     }
 }
 
