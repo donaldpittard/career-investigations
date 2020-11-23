@@ -28,8 +28,8 @@ class JobApplicationSubmitted extends Mailable
      */
     public function build()
     {
-        $to = config('app.mail.to');
-        $from = config('app.mail.from');
+        $to = config('mail.to');
+        $from = config('mail.from');
         $subject = 'Job Application Submitted';
         $body = view('review-job-application', [
             'firstName'         => 'Donald',
