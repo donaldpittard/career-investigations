@@ -172,35 +172,35 @@
             <td>{{ $reference1Name }}</td>
         </tr>
         <tr>
-            <th>1st Reference Relationship<th>
+            <th>1st Reference Relationship</th>
             <td>{{ $reference1Relationship }}</td>
         </tr>
         <tr>
-            <th>1st Reference Phone Number<th>
+            <th>1st Reference Phone Number</th>
             <td>{{ $reference1PhoneNumber }}</td>
         </tr>
         <tr>
-            <th>2nd Reference Name<th>
+            <th>2nd Reference Name</th>
             <td>{{ $reference2Name }}</td>
         </tr>
         <tr>
-            <th>2nd Reference Relationship<th>
+            <th>2nd Reference Relationship</th>
             <td>{{ $reference2Relationship }}</td>
         </tr>
         <tr>
-            <th>2nd Reference Phone Number<th>
+            <th>2nd Reference Phone Number</th>
             <td>{{ $reference2PhoneNumber }}</td>
         </tr>
         <tr>
-            <th>3rd Reference Name<th>
+            <th>3rd Reference Name</th>
             <td>{{ $reference3Name }}</td>
         </tr>
         <tr>
-            <th>3rd Reference Relationship<th>
+            <th>3rd Reference Relationship</th>
             <td>{{ $reference3Relationship }}</td>
         </tr>
         <tr>
-            <th>3rd Reference Phone Number<th>
+            <th>3rd Reference Phone Number</th>
             <td>{{ $reference3PhoneNumber }}</td>
         </tr>
     </tbody>
