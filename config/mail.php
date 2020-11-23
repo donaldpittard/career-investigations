@@ -82,6 +82,7 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
+    
     'to' => [
         'address' => env('MAIL_TO_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_TO_NAME', 'Example')
