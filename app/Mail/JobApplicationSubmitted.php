@@ -31,7 +31,7 @@ class JobApplicationSubmitted extends Mailable
         $to = config('mail.to');
         $from = config('mail.from');
         $subject = 'Job Application Submitted';
-        $body = view('review-job-application', [
+        $body = view('emails.job-application.submitted', [
             'firstName'         => 'Donald',
             'lastName'          => 'Pittard',
             'address'           => '7712 Secretariat Dr',
@@ -68,6 +68,6 @@ class JobApplicationSubmitted extends Mailable
         return $this
             ->from($from)
             ->subject($subject)
-            ->view($body);
+            ->setBody($body);
     }
 }
