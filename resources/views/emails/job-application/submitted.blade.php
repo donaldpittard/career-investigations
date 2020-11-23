@@ -85,7 +85,7 @@
         </tr>
         <tr>
             <th>College Years</th>
-            <td>{{ $collegeYears }}
+            <td>{{ $collegeYears }}<td>
         </tr>
         <tr>
             <th>Other Institution Name</th>
