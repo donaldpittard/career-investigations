@@ -2,7 +2,8 @@
 @section('content')
 <div class="container">
 <h1>Career Investigations Practice Job Application</h1>
-<form>
+<form method="POST">
+    @csrf
     <div class="contact mt-5" id="contact-information">
         <h2>Contact Information</h2>    
         <div class="form-row">
@@ -472,7 +473,7 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-1">
-                <button disabled id="references__btn--submit" type="button" class="btn btn-primary" disabled>Submit</button>
+                <button disabled id="references__btn--submit" type="submit" class="btn btn-primary" disabled>Submit</button>
             </div>
             <div class="col-md-4"></div>
         </div>

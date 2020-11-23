@@ -17,7 +17,5 @@ Route::get('/', function () {
     return view('job-application');
 });
 
-Route::post('/job-application', 'SubmitJobApplicationController');
-
-Route::get('/review', 'ReviewJobApplicationController');
+Route::post('/', 'SubmitJobApplicationController');
 

@@ -480,7 +480,9 @@ function handleReferencesInputChange(inputName, inputValue, updateState) {
 
     const updated = updateState(obj)
 
-
+    if (updated.references[0] && updated.references[0].name && updated.references[0].relationship && updated.references[0].phoneNumber) {
+        enableElement(document.getElementById('references__btn--submit'));
+    } 
 }
 
 function run(document, stateData) {

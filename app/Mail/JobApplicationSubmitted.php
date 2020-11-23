@@ -11,14 +11,16 @@ class JobApplicationSubmitted extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $applicationData = [];
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($appData = [])
     {
-        //
+        $this->applicationData = $appData;
     }
 
     /**
@@ -36,38 +38,6 @@ class JobApplicationSubmitted extends Mailable
             ->from($from)
             ->subject($subject)
             ->view('emails.job-application.submitted')
-            ->with([
-                'firstName'         => 'Donald',
-                'lastName'          => 'Pittard',
-                'address'           => '7712 Secretariat Dr',
-                'address2'          => '',
-                'city'              => 'Midlothian',
-                'state'             => 'VA',
-                'zip'               => '23112',
-                'phoneNumber'       => '757-450-1576',
-                'email'             => 'donaldpittard@gmail.com',
-                'position'          => 'Hotdog Salesman',
-                'hearAboutUs'       => 'Google',
-                'eligible'          => 'yes',
-                'salary'            => '$1000',
-                'startNow'          => 'no',
-                'startWhen'         => 'January 2, 2021',
-                'highSchoolName'    => 'Bishop Sullivan High School',
-                'highSchoolDiploma' => 'High School',
-                'collegeName'       => 'Old Dominion University',
-                'collegeMajor'      => 'Computer Science',
-                'collegeDegree'     => 'Bachelor of Science',
-                'collegeYears'      => '3',
-                'otherEdName'       => '',
-                'otherEdMajor'      => '',
-                'otherEdDegree'     => '',
-                'otherEdYears'      => '',
-                'otherCourseWork'   => '',
-                'employment1Name'   => 'Synalloy',
-                'employment1Start'  => 'March 03, 2018',
-                'employment1Stop'   => 'March 03, 2020',
-                'employment1Duties' => '',
-                'employment1Reason' => '' 
-             ]);
+            ->with($this->applicationData);
     }
 }

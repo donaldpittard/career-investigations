@@ -104,8 +104,103 @@
             <td>{{$otherEdYears}}</td>
         </td>
         <tr>
-            <th>Other Course Workd</th>
+            <th>Other Course Work</th>
             <td>{{$otherCourseWork}}</td>
+        </tr>
+        <tr>
+            <th>Employer 1 Name</th>
+            <td>{{ $employment1Name }}</td>
+        </tr>
+        <tr>
+            <th>Employer 1 Duties</th>
+            <td>{{ $employment1Duties }}</td>
+        </tr>
+        <tr>
+            <th>Employmer 1 Start Date</th>
+            <td>{{ $employment1Start }}</td>
+        </tr>
+        <tr>
+            <th>Employer 1 End Date</th>
+            <td>{{ $employment1End }}</td>
+        </tr>
+        <tr>
+            <th>Reason for leaving Employer 1</th>
+            <td>{{ $employment1Reason }}</td>
+        </tr>
+        <tr>
+            <th>Employer 2 Name</th>
+            <td>{{ $employment2Name }}</td>
+        </tr>
+        <tr>
+            <th>Employer 2 Duties</th>
+            <td>{{ $employment2Duties }}</td>
+        </tr>
+        <tr>
+            <th>Employmer 2 Start Date</th>
+            <td>{{ $employment2Start }}</td>
+        </tr>
+        <tr>
+            <th>Employer 2 End Date</th>
+            <td>{{ $employment2End }}</td>
+        </tr>
+        <tr>
+            <th>Reason for leaving Employer 2</th>
+            <td>{{ $employment2Reason }}</td>
+        </tr><tr>
+            <th>Employer 3 Name</th>
+            <td>{{ $employment3Name }}</td>
+        </tr>
+        <tr>
+            <th>Employer 3 Duties</th>
+            <td>{{ $employment3Duties }}</td>
+        </tr>
+        <tr>
+            <th>Employmer 3 Start Date</th>
+            <td>{{ $employment3Start }}</td>
+        </tr>
+        <tr>
+            <th>Employer 3 End Date</th>
+            <td>{{ $employment3End }}</td>
+        </tr>
+        <tr>
+            <th>Reason for leaving Employer 3</th>
+            <td>{{ $employment3Reason }}</td>
+        </tr>
+        <tr>
+            <th>1st Reference Name<th>
+            <td>{{ $reference1Name }}
+        </tr>
+        <tr>
+            <th>1st Reference Relationship<th>
+            <td>{{ $reference1Relationship }}
+        </tr>
+        <tr>
+            <th>1st Reference Phone Number<th>
+            <td>{{ $reference1PhoneNumber }}
+        </tr>
+        <tr>
+            <th>2nd Reference Name<th>
+            <td>{{ $reference2Name }}
+        </tr>
+        <tr>
+            <th>2nd Reference Relationship<th>
+            <td>{{ $reference2Relationship }}
+        </tr>
+        <tr>
+            <th>2nd Reference Phone Number<th>
+            <td>{{ $reference2PhoneNumber }}
+        </tr>
+        <tr>
+            <th>3rd Reference Name<th>
+            <td>{{ $reference3Name }}
+        </tr>
+        <tr>
+            <th>3rd Reference Relationship<th>
+            <td>{{ $reference3Relationship }}
+        </tr>
+        <tr>
+            <th>3rd Reference Phone Number<th>
+            <td>{{ $reference3PhoneNumber }}
         </tr>
     </tbody>
 </table>
