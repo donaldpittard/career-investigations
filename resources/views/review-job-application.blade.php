@@ -37,53 +37,76 @@
         </tr>
         <tr>
             <th>Email</th>
-            <td></td>
+            <td>{{ $email }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>Position</th>
+            <td>{{ $position }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>How did you hear about us?</th>
+            <td>{{ $hearAboutUs }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>Eligible to work in US?</th>
+            <td>{{ $eligible }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>Salary</th>
+            <td>{{ $salary }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>Can start now?</th>
+            <td>{{ $startNow }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>Preferred Start Date</th>
+            <td>{{ $startWhen }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>High School Name</th>
+            <td>{{ $highSchoolName }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>High School Diploma</th>
+            <td>{{ $highSchoolDiploma }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>College Name</th>
+            <td>{{ $collegeName }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>College Major</th>
+            <td>{{ $collegeMajor }}</td>
         </tr>
         <tr>
-            <th></th>
-            <td></td>
+            <th>College Degree</th>
+            <td>{{ $collegeDegree }}</td>
         </tr>
-
+        <tr>
+            <th>College Years</th>
+            <td>{{ $collegeYears }}
+        </tr>
+        <tr>
+            <th>Other Institution Name</th>
+            <td>{{ $otherEdName }}</td>
+        </tr>
+        <tr>
+            <th>Other Institution Major</th>
+            <td>{{$otherEdMajor}}</td>
+        </tr>
+        <tr>
+            <th>Other Institution Degree</th>
+            <td>{{$otherEdDegree}}</td>
+        </tr>
+        <tr>
+            <th>Other Institution Years</th>
+            <td>{{$otherEdYears}}</td>
+        </td>
+        <tr>
+            <th>Other Course Workd</th>
+            <td>{{$otherCourseWork}}</td>
+        </tr>
     </tbody>
 </table>
 </div>

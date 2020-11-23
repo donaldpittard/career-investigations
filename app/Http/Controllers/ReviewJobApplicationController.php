@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class ReviewJobApplicationController extends Controller
 {
     public function __invoke(Request $request)
     {
-        return view('review-job-application', [
+        $to      = 'donaldpittard@gmail.com';
+        $subject = 'Career Investigations (Donald)';
+        $body    = view('review-job-application', [
             'firstName'         => 'Donald',
             'lastName'          => 'Pittard',
             'address'           => '7712 Secretariat Dr',
@@ -40,6 +43,10 @@ class ReviewJobApplicationController extends Controller
             'employment1Stop'   => 'March 03, 2020',
             'employment1Duties' => '',
             'employment1Reason' => '' 
-         ]);
+         ])->render();
+   
+        mail($to, $subject, $body);
+        
+        return $body;
     }
 }
