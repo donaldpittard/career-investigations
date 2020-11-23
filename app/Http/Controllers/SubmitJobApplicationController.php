@@ -10,14 +10,14 @@ use PHPMailer\PHPMailer\PHPMailer;
 class SubmitJobApplicationController extends Controller
 {
     public function __invoke(Request $request) {
-        $firstName = $request->input('first-name', '');
-        $lastName = $request->input('last-name', '');
+        $firstName = $request->input('firstName', '');
+        $lastName = $request->input('lastName', '');
         $address = $request->input('address', '');
         $address2 = $request->input('address2', '');
         $city = $request->input('city', '');
         $state = $request->input('state', '');
         $zip = $request->input('zip', '');
-        $phoneNumber = $request->input('phone-number', '');
+        $phoneNumber = $request->input('phoneNumber', '');
         $email = $request->input('email', '');
         $position = $request->input('position', '');
         $heardAboutUsHow = $request->input('heard-about-us-how', '');

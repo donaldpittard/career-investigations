@@ -146,7 +146,8 @@
         <tr>
             <th>Reason for leaving Employer 2</th>
             <td>{{ $employment2Reason }}</td>
-        </tr><tr>
+        </tr>
+        <tr>
             <th>Employer 3 Name</th>
             <td>{{ $employment3Name }}</td>
         </tr>
@@ -168,39 +169,39 @@
         </tr>
         <tr>
             <th>1st Reference Name<th>
-            <td>{{ $reference1Name }}
+            <td>{{ $reference1Name }}<td>
         </tr>
         <tr>
             <th>1st Reference Relationship<th>
-            <td>{{ $reference1Relationship }}
+            <td>{{ $reference1Relationship }}</td>
         </tr>
         <tr>
             <th>1st Reference Phone Number<th>
-            <td>{{ $reference1PhoneNumber }}
+            <td>{{ $reference1PhoneNumber }}</td>
         </tr>
         <tr>
             <th>2nd Reference Name<th>
-            <td>{{ $reference2Name }}
+            <td>{{ $reference2Name }}</td>
         </tr>
         <tr>
             <th>2nd Reference Relationship<th>
-            <td>{{ $reference2Relationship }}
+            <td>{{ $reference2Relationship }}</td>
         </tr>
         <tr>
             <th>2nd Reference Phone Number<th>
-            <td>{{ $reference2PhoneNumber }}
+            <td>{{ $reference2PhoneNumber }}</td>
         </tr>
         <tr>
             <th>3rd Reference Name<th>
-            <td>{{ $reference3Name }}
+            <td>{{ $reference3Name }}</td>
         </tr>
         <tr>
             <th>3rd Reference Relationship<th>
-            <td>{{ $reference3Relationship }}
+            <td>{{ $reference3Relationship }}</td>
         </tr>
         <tr>
             <th>3rd Reference Phone Number<th>
-            <td>{{ $reference3PhoneNumber }}
+            <td>{{ $reference3PhoneNumber }}</td>
         </tr>
     </tbody>
 </table>

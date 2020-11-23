@@ -32,7 +32,8 @@ class JobApplicationSubmitted extends Mailable
     {
         $to = config('mail.to');
         $from = config('mail.from');
-        $subject = 'Job Application Submitted';
+        $name = $this->appData['firstName'] . ' ' . $this->appData['lastName'];
+        $subject = "Job Application Submitted ($name)";
 
         return $this
             ->from($from)
