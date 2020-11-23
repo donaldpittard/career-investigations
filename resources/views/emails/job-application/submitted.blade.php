@@ -168,7 +168,7 @@
             <td>{{ $employment3Reason }}</td>
         </tr>
         <tr>
-            <th>1st Reference Name<th>
+            <th>1st Reference Name</th>
             <td>{{ $reference1Name }}</td>
         </tr>
         <tr>
