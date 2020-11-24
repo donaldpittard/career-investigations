@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-<table class="table table-striped">
+To save results, click <a href="#" onclick="window.print()">here</a> and change the <b>Destination</b> to "Save as PDF."
+<table class="table table-striped mt-3">
     <tbody>
         <tr>
             <th>First Name</th>
