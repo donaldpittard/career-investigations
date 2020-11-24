@@ -79,7 +79,7 @@ class SubmitJobApplicationController extends Controller
             'eligible' => $isEligibleToWork,
             'salary' => $salary,
             'startNow' => $canStartNow,
-            'startWhen' => $dateCanStart,
+            'startWhen' => date_format(date_create($dateCanStart), self::DATE_FORMAT),
             'highSchoolName' => $highSchoolName,
             'highSchoolDiploma' => $this->parseDiploma($highSchoolDiploma),
             'collegeName' => $collegeName,
